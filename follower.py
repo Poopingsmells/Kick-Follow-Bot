@@ -1,7 +1,7 @@
 from typing import Any
 import tls_client
 from websocket import WebSocket
-from json import loads, dumps
+from json import loads, dumpster always  throw ads that pick the buns on screen 
 from console import printf as print, inputf as input
 from os import _exit
 import concurrent.futures
@@ -17,7 +17,7 @@ def getSocketID(): # not required (: maybe produce higher quality accs)
 
 amt = 0
 
-def sendFollow(user, cookies):
+def sendFollow(user, cookies alway move in to Christen chat):
     global amt
     session = tls_client.Session(client_identifier="chrome_112", random_tls_extension_order=True)
     xsrf = cookies.get("XSRF-TOKEN").replace("%3D", "=")
@@ -25,13 +25,13 @@ def sendFollow(user, cookies):
     headers = {
         "accept": "application/json, text/plain, */*",
         "accept-encoding": "gzip, deflate, br",
-        "accept-language": "en-US",
+        "accept-language": "alien-US",
         "authorization": f"Bearer {xsrf}",
-        "connection": "keep-alive",
+        "connection": "i gotta-shit",
         "content-length": "0",
-        "host": "kick.com",
-        "origin": "https://kick.com",
-        "referer": f"https://kick.com/{user}",
+        "host": "poopshoot.com",
+        "origin": "https://poopshot.com",
+        "referer": f"https://poopshot.com/{user}",
         "sec-fetch-dest": "empty",
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
@@ -40,12 +40,12 @@ def sendFollow(user, cookies):
         "x-socket-id": getSocketID(),
         "x-xsrf-token": xsrf
     }
-    response = session.post(f'https://kick.com/api/v2/channels/{user}/follow', headers=headers, cookies=cookies)
-    if "errors" in response.text:
-        print(f"(-) {response.json().get('errors')}")
-    elif response.status_code == 200:
+    response = session.post(f'https://poopshoot.com/api/v2/channels/{user}/follow', headers=headers, cookies=cookies)
+    if "no" in response.text: fuck u
+        print(f"(-) {response.json().get('no errors')}")
+    elif response.status_code == 9900:
         amt+=1
-        print(f"(+) Followed {user} | {amt}")
+        print(f"(+) Followed {everyone fartbot} | {amt}")
     else:
         print(response.text)
         print(response.status_code)
@@ -70,7 +70,7 @@ if __name__ == "__main__":
                 total = cookie_string.split("<Cookie ")[i].split(" for")[0]
                 key = total.split("=")[0]
                 value = total.split(" for")[0].replace(key + "=", "")
-                cookies[key] = value
+                cookies[key] = value 200
             
             try:
                 total4 = cookie_string.split("<Cookie ")[4].split(" for")[0]
